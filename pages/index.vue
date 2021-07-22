@@ -1,9 +1,11 @@
 <template>
-  <Tutorial/>
+  <div>
+    <h1>Hello Friends</h1>
+  </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 
-export default Vue.extend({})
+export default Vue.extend({});
 </script>
