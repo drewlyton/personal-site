@@ -24,15 +24,18 @@
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/tailwindcss": "^4.2.0",
     "@vue/test-utils": "^1.2.1",
+    "autoprefixer": "^10.3.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^27.0.5",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.12.1",
     "jest": "^27.0.5",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.6",
     "ts-jest": "^27.0.3",
     "vue-jest": "^3.0.4"
   }
