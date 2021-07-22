@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hello Friends</h1>
+    <construction />
   </div>
 </template>
 
