@@ -5,15 +5,26 @@
     <div class="mx-auto block"><avatar /></div>
     <div class="block">
       <h1 class="text-5xl font-bold mt-4 mb-4">
-        👋
+        <span role="img" aria-label="hand wave">👋 </span>
         <span
           class="
+            inline
             text-transparent
             bg-clip-text bg-gradient-to-br
             from-red-600
             to-yellow-600
           "
-          >Hey friend!</span
+          >Hey
+        </span>
+        <span
+          class="
+            inline
+            text-transparent
+            bg-clip-text bg-gradient-to-br
+            from-red-600
+            to-yellow-600
+          "
+          >friend!</span
         >
       </h1>
     </div>
