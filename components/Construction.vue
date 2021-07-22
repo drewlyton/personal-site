@@ -2,7 +2,6 @@
   <div
     class="
       p-10
-      max-w-md
       bg-white
       rounded-xl
       shadow-md
