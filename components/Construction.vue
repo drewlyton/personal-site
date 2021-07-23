@@ -34,8 +34,8 @@
     </p>
     <p class="text-lg mb-2">
       So, here's
-      <a href="mailto:drew@lumastic.com" class="underline text-red-600"
-        >my email</a
+      <span class="underline text-red-600 cursor-pointer" @click="copyEmail"
+        >my email</span
       >
       if you need to get in contact with me. Now, go enjoy
       <a
@@ -47,11 +47,34 @@
     </p>
     <p class="text-md text-gray-700">Best,</p>
     <p class="text-md text-gray-700">Drew Lytle</p>
+    <input id="my_email" type="text" value="drew@lumastic.com" />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    copyEmail() {
+      /* Get the text field */
+      const copyText = document.getElementById("my_email");
+
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+
+      /* Alert the copied text */
+      alert("Copied " + copyText.value + " to your clipboard!");
+    }
+  }
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+#my_email {
+  position: absolute;
+  left: -9999px;
+}
+</style>
