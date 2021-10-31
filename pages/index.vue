@@ -29,22 +29,26 @@
         <h1>I'M A...</h1>
       </div>
       <div class="pt-4 flex flex-col items-center space-y-12">
-        <a href="" class="wave-border bottom"
-          ><h2 class="leading-0.75">software engineer</h2></a
-        >
-        <a href="" class="wave-border bottom"
-          ><h2 class="leading-0.75">video producer</h2></a
-        >
-        <a href="">
-          <h2 class="leading-0.75">
-            & <span class="wave-border bottom">motion designer</span>
-          </h2>
-        </a>
-        <a href="">
-          <h2 class="leading-0.75">
-            in <span class="wave-border bottom">charlottesville, va</span>
-          </h2>
-        </a>
+        <h2 class="leading-0.75">
+          <a href="" class="wave-border bottom inline-block">
+            software engineer
+          </a>
+        </h2>
+        <h2 class="leading-0.75">
+          <a href="" class="wave-border bottom inline-block">video producer</a>
+        </h2>
+        <h2 class="leading-0.75">
+          &
+          <a href="" class="wave-border bottom inline-block">
+            motion designer
+          </a>
+        </h2>
+        <h2 class="leading-0.75">
+          in
+          <a href="" class="wave-border bottom inline-block">
+            charlottesville, va
+          </a>
+        </h2>
       </div>
     </section>
   </div>
