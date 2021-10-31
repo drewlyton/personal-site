@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="p-10 bg-white max-w-md mx-auto rounded-xl shadow-xl flex flex-col"
-  >
+  <div class="p-10 max-w-md mx-auto flex flex-col mt-28">
     <div class="mx-auto block"><avatar /></div>
     <div class="block">
       <h1 class="text-5xl font-bold mt-4 mb-4">

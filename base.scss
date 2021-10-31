@@ -1,0 +1,116 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css");
+
+:root {
+  --bg-light: #fff8f1;
+}
+
+@font-face {
+  font-family: "Grayscale";
+  src: local("Grayscale"),
+    url("~static/Grayscale-Regular.ttf") format("truetype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.header-font {
+  font-family: "Grayscale";
+}
+
+h1 {
+  @apply text-6xl;
+}
+h2 {
+  @apply text-5xl;
+}
+h5 {
+  @apply text-2xl;
+}
+
+html,
+body {
+  background-color: var(--bg-light);
+  font-family: system-ui, -apple-system,
+    /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+nav,
+footer {
+  background-color: var(--bg-light);
+}
+
+main {
+  // min-height: 100vh;
+  @apply max-w-screen-lg px-4 flex-grow mx-auto;
+  .top-section {
+    padding-top: 98px;
+  }
+  padding-bottom: 60px;
+}
+.h-screen {
+  padding-bottom: 60px;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-br from-red-600 to-yellow-600;
+}
+
+.wave-border {
+  border-image: url("~static/border-dotted.svg") 30 0;
+  transition: all 0.2s;
+  &.solid {
+    border-image: url("~static/border.svg") 30 0;
+  }
+  &.bottom {
+    border-bottom: 5px solid;
+  }
+  &.top {
+    border-top: 5px solid;
+  }
+  &.adjust-height {
+    margin-bottom: -5px;
+  }
+}
+a {
+  transition: all 0.2s;
+  &:hover,
+  &.active {
+    @apply text-red-600;
+    cursor: pointer;
+  }
+  &.wave-border {
+    text-decoration: none;
+    &:hover,
+    &.active {
+      border-image: url("~static/border-apache.svg") 30 0;
+    }
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+input:checked ~ .dot {
+  transform: translateX(140%);
+  @apply bg-gradient-to-br from-blue-600 to-indigo-600;
+}
+
+button {
+  @extend .gradient-bg;
+  @extend .header-font;
+  @apply uppercase inline-flex items-center;
+  @apply py-1.5 px-4 text-white text-sm rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75;
+}
+
+.page-header {
+  @apply transform -rotate-2 text-center;
+}

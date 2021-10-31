@@ -17,8 +17,12 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
+  router: {
+    linkActiveClass: "active"
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/base.css"],
+  css: ["@/base.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

@@ -8,7 +8,15 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      rotate: {
+        "-0.25": "-0.25deg",
+        "-0.5": "-0.5deg"
+      },
+      lineHeight: {
+        0.75: "0.75"
+      }
+    }
   },
   variants: {
     extend: {}
