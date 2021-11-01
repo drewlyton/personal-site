@@ -25,7 +25,7 @@ export default {
   css: ["@/base.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["~/plugins/graphcms.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
