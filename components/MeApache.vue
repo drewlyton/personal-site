@@ -324,7 +324,7 @@ export default Vue.extend({
       )
       .timeScale(0.9);
     const blinking = gsap
-      .timeline({ repeat: -1, repeatDelay: 10 })
+      .timeline({ repeat: -1, repeatDelay: 7 })
       .to("#left-eye, #right-eye", {
         scaleY: 0.25,
         transformOrigin: "center center",
