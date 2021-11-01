@@ -2,12 +2,14 @@
   <div>
     <section class="h-screen top-section">
       <div class="h-full relative">
-        <div class="page-header">
-          <h5>HEY, FRIEND 👋</h5>
-          <h2>MY NAME’S DREW</h2>
+        <div class="tilted-header">
+          <div>
+            <h5>HEY, FRIEND 👋</h5>
+            <h2>MY NAME’S DREW</h2>
+          </div>
         </div>
         <div class="flex justify-center">
-          <img src="~static/drew.svg" alt="Self portrait" class="max-h-96" />
+          <me-apache />
         </div>
         <div
           class="
@@ -24,33 +26,39 @@
         </div>
       </div>
     </section>
-    <section class="pb-4">
-      <div class="page-header mb-4">
+    <section class="mb-24" style="min-height: 60vh">
+      <div class="tilted-header mb-4">
         <h1>I'M A...</h1>
       </div>
       <div class="pt-4 flex flex-col items-center space-y-12">
         <h2 class="leading-0.75">
-          <a href="" class="wave-border bottom inline-block">
+          <a href="#software" class="wave-border bottom inline-block">
             software engineer
           </a>
         </h2>
         <h2 class="leading-0.75">
-          <a href="" class="wave-border bottom inline-block">video producer</a>
+          <a href="#video" class="wave-border bottom inline-block"
+            >video producer</a
+          >
         </h2>
         <h2 class="leading-0.75">
           &
-          <a href="" class="wave-border bottom inline-block">
+          <a href="#motion" class="wave-border bottom inline-block">
             motion designer
           </a>
         </h2>
         <h2 class="leading-0.75">
           in
-          <a href="" class="wave-border bottom inline-block">
+          <a href="#life" class="wave-border bottom inline-block">
             charlottesville, va
           </a>
         </h2>
       </div>
     </section>
+    <software-section />
+    <video-section />
+    <motion-section />
+    <life-section />
   </div>
 </template>
 
@@ -70,5 +78,8 @@ export default Vue.extend({
 .home-enter,
 .home-leave-active {
   opacity: 0;
+}
+.info-section {
+  @apply pb-24 max-w-prose mx-auto;
 }
 </style>

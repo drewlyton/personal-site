@@ -30,37 +30,7 @@
           >Stories</nuxt-link
         >
         <div>
-          <label for="theme" class="flex items-center cursor-pointer">
-            <!-- toggle -->
-            <div class="relative">
-              <!-- input -->
-              <input id="theme" type="checkbox" class="sr-only" />
-              <!-- line -->
-              <div
-                class="
-                  block
-                  border-dashed border-2 border-black
-                  w-12
-                  h-6
-                  rounded-full
-                "
-              ></div>
-              <!-- dot -->
-              <div
-                class="
-                  transition-all
-                  dot
-                  absolute
-                  left-1
-                  top-1
-                  gradient-bg
-                  w-4
-                  h-4
-                  rounded-full
-                "
-              ></div>
-            </div>
-          </label>
+          <theme-switch />
         </div>
       </div>
     </div>

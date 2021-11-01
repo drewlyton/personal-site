@@ -2,6 +2,28 @@
 
 :root {
   --bg-light: #fff8f1;
+  --border-solid: url("~static/border.svg") 30 0;
+  --border-dotted: url("~static/border-dotted.svg") 30 0;
+  --border-colored: url("~static/border-apache.svg") 30 0;
+  --logo-image: url("~static/logo.svg");
+}
+.dark {
+  --bg-light: #192230;
+  --border-solid: url("~static/white-border.svg") 30 0;
+  --border-dotted: url("~static/white-border-dotted.svg") 30 0;
+  --border-colored: url("~static/border-midnight.svg") 30 0;
+  --logo-image: url("~static/logo-midnight.svg");
+}
+.logo-image {
+  content: var(--logo-image);
+}
+* {
+  :target::before {
+    content: "";
+    display: block;
+    height: 120px; /* fixed header height*/
+    margin: -120px 0 0; /* negative fixed header height */
+  }
 }
 
 @font-face {
@@ -35,6 +57,7 @@ body {
   font-family: system-ui, -apple-system,
     /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  @apply dark:text-white;
 }
 
 nav,
@@ -44,7 +67,7 @@ footer {
 
 main {
   // min-height: 100vh;
-  @apply max-w-screen-lg px-4 flex-grow mx-auto;
+  @apply max-w-screen-md px-4 flex-grow mx-auto;
   .top-section {
     padding-top: 98px;
   }
@@ -54,15 +77,20 @@ main {
   padding-bottom: 60px;
 }
 
+p {
+  @apply mb-3 leading-7;
+}
+
 .gradient-bg {
   @apply bg-gradient-to-br from-red-600 to-yellow-600;
+  @apply dark:from-blue-600 dark:to-indigo-600;
 }
 
 .wave-border {
-  border-image: url("~static/border-dotted.svg") 30 0;
+  border-image: var(--border-dotted);
   transition: all 0.2s;
   &.solid {
-    border-image: url("~static/border.svg") 30 0;
+    border-image: var(--border-solid);
   }
   &.bottom {
     border-bottom: 5px solid;
@@ -78,14 +106,14 @@ a {
   transition: all 0.2s;
   &:hover,
   &.active {
-    @apply text-red-600;
+    @apply text-red-600 dark:text-blue-400;
     cursor: pointer;
   }
   &.wave-border {
     text-decoration: none;
     &:hover,
     &.active {
-      border-image: url("~static/border-apache.svg") 30 0;
+      border-image: var(--border-colored);
     }
   }
 }
@@ -111,6 +139,10 @@ button {
   @apply py-1.5 px-4 text-white text-sm rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75;
 }
 
-.page-header {
-  @apply transform -rotate-2 text-center;
+.tilted {
+  &-header {
+    @apply transform -rotate-2;
+    @apply flex-col flex items-center;
+  }
+  @apply transform -rotate-2;
 }

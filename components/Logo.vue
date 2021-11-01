@@ -1,6 +1,6 @@
 <template>
   <nuxt-link to="/" class="inline-flex items-baseline" active-class="false">
-    <img src="/logo.svg" alt="" />
+    <img class="logo-image" alt="" />
     <div class="leading-none header-font">REW</div>
   </nuxt-link>
 </template>

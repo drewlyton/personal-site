@@ -1,6 +1,6 @@
 <template>
   <section class="top-section">
-    <div class="page-header">
+    <div class="tilted-header">
       <h1 class="uppercase">Stories</h1>
     </div>
   </section>
