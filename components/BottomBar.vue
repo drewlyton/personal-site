@@ -18,13 +18,13 @@
     >
       <div class="flex-grow flex items-center space-x-4">
         <div class="header-font leading-none uppercase">Find me on:</div>
-        <a href="" target="_blank">
+        <a href="https://twitter.com/itsjustdrewit" target="_blank">
           <i class="bi bi-twitter"></i>
         </a>
-        <a href="" target="_blank">
+        <a href="https://www.youtube.com/c/Curiository" target="_blank">
           <i class="bi bi-youtube"></i>
         </a>
-        <a href="" target="_blank">
+        <a href="https://github.com/aml3ed" target="_blank">
           <i class="bi bi-github"></i>
         </a>
       </div>
