@@ -7,7 +7,7 @@
       <div class="px-2">
         <div
           class="
-            border-2 border-gray-700
+            border border-gray-700
             dark:border-gray-200
             rounded-lg
             flex
@@ -55,6 +55,25 @@ export default Vue.extend({
     return {
       searchString: "",
       fetchedStories: [] as Story[]
+    };
+  },
+  head() {
+    return {
+      title: "Stories | Drew Lytle",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "My name's Drew. I'm a designer and software engineer who likes to make stuff on the internet. I make videos and write about things I'm learning."
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content:
+            "https://media.graphcms.com/output=format:jpg/resize=,width:400,height:400/Rxt3c6FaT4uTu7iYkkkC"
+        }
+      ]
     };
   },
   methods: {

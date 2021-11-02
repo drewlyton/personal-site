@@ -88,6 +88,25 @@ export default Vue.extend({
       tags: ["life"]
     });
     return { softwareStories, videoStories, motionStories, lifeStories };
+  },
+  head() {
+    return {
+      title: "Drew Lytle",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "My name's Drew. I'm a designer and software engineer who likes to make stuff on the internet. I make videos and write about things I'm learning."
+        },
+        {
+          hid: "og:image",
+          name: "og:image",
+          content:
+            "https://media.graphcms.com/output=format:jpg/resize=,width:400,height:400/Rxt3c6FaT4uTu7iYkkkC"
+        }
+      ]
+    };
   }
 });
 </script>

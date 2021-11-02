@@ -49,6 +49,13 @@
 <script lang="ts">
 import Vue from "vue";
 import GetStory from "../../data/GetStory";
+import Story from "~/types/Story";
+
+declare module "vue/types/vue" {
+  interface Vue {
+    story: Story;
+  }
+}
 
 export default Vue.extend({
   transition: "home",
@@ -56,6 +63,23 @@ export default Vue.extend({
     const { slug } = params;
     const { story } = await $graphcms.request(GetStory, { slug });
     return { story };
+  },
+  head() {
+    return {
+      title: this.story.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.story.description
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.story.featuredImage.url
+        }
+      ]
+    };
   }
 });
 </script>

@@ -6,6 +6,7 @@ export default gql`
       id
       title
       description
+      slug
       createdAt
       featuredImage {
         url
