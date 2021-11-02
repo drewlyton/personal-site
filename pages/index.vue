@@ -55,18 +55,40 @@
         </h2>
       </div>
     </section>
-    <software-section />
-    <video-section />
-    <motion-section />
-    <life-section />
+    <software-section :stories="softwareStories" />
+    <video-section :stories="videoStories" />
+    <motion-section :stories="motionStories" />
+    <life-section :stories="lifeStories" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import GetStoriesByTag from "../data/GetStoriesByTag";
 
 export default Vue.extend({
-  transition: "home"
+  transition: "home",
+  async asyncData({ $graphcms }) {
+    const { stories: softwareStories } = await $graphcms.request(
+      GetStoriesByTag,
+      {
+        tags: ["software"]
+      }
+    );
+    const { stories: videoStories } = await $graphcms.request(GetStoriesByTag, {
+      tags: ["video"]
+    });
+    const { stories: motionStories } = await $graphcms.request(
+      GetStoriesByTag,
+      {
+        tags: ["motion"]
+      }
+    );
+    const { stories: lifeStories } = await $graphcms.request(GetStoriesByTag, {
+      tags: ["life"]
+    });
+    return { softwareStories, videoStories, motionStories, lifeStories };
+  }
 });
 </script>
 
@@ -80,6 +102,6 @@ export default Vue.extend({
   opacity: 0;
 }
 .info-section {
-  @apply pb-24 max-w-prose mx-auto;
+  @apply pb-16 max-w-prose mx-auto;
 }
 </style>

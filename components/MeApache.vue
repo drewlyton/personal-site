@@ -361,7 +361,7 @@ export default Vue.extend({
     fill: #93c5fd;
   }
   .skin-tone {
-    fill: #ddebff;
+    fill: #f5f9ff;
   }
 }
 </style>

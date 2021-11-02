@@ -29,7 +29,7 @@
         </a>
       </div>
       <div class="flex-grow-0">
-        <button>
+        <button @click="copyEmail">
           <i class="bi bi-envelope-fill mr-1.5 mb-0.5"></i>
           Contact Me
         </button>
@@ -41,7 +41,28 @@
 <script lang="ts">
 import Vue from "vue";
 
-export default Vue.extend({});
+export default Vue.extend({
+  methods: {
+    copyEmail() {
+      if (process.client) {
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText("drew@lumastic.com").then(
+          function () {
+            console.log("Copied successfully!");
+            alert("Copied drew@lumastic.com to your clipboard!");
+          },
+          function (err) {
+            console.error("Async: Could not copy text: ", err);
+            alert(
+              "Sorry! I couldn't copy my email to your clipboard. It's drew@lumastic.com"
+            );
+          }
+        );
+        /* Alert the copied text */
+      }
+    }
+  }
+});
 </script>
 
 <style scoped></style>
