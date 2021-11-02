@@ -1,0 +1,174 @@
+:root {
+  --bg-light: #fff8f1;
+  --border-solid: url("~static/border.svg") 30 0;
+  --border-dotted: url("~static/border-dotted.svg") 30 0;
+  --border-colored: url("~static/border-apache.svg") 30 0;
+  --logo-image: url("~static/logo.svg");
+}
+.dark {
+  --bg-light: #192230;
+  --border-solid: url("~static/white-border.svg") 30 0;
+  --border-dotted: url("~static/white-border-dotted.svg") 30 0;
+  --border-colored: url("~static/border-midnight.svg") 30 0;
+  --logo-image: url("~static/logo-midnight.svg");
+}
+.logo-image {
+  content: var(--logo-image);
+}
+* {
+  :target::before {
+    content: "";
+    display: block;
+    height: 100px; /* fixed header height*/
+    margin: -100px 0 0; /* negative fixed header height */
+  }
+}
+
+@font-face {
+  font-family: "Grayscale";
+  src: local("Grayscale"),
+    url("~static/Grayscale-Regular.ttf") format("truetype");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.header-font {
+  font-family: "Grayscale";
+}
+
+h1 {
+  @apply text-6xl;
+}
+h2 {
+  @apply text-5xl;
+}
+h3 {
+  @apply text-4xl;
+}
+h4 {
+  @apply text-3xl;
+}
+h5 {
+  @apply text-2xl;
+}
+
+html,
+input,
+body {
+  background-color: var(--bg-light);
+  font-family: system-ui, -apple-system,
+    /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  @apply dark:text-white;
+}
+
+nav,
+footer {
+  background-color: var(--bg-light);
+}
+
+main {
+  // min-height: 100vh;
+  @apply max-w-screen-md px-4 flex-grow mx-auto;
+  .top-section {
+    padding-top: 98px;
+  }
+  padding-bottom: 60px;
+}
+.h-screen {
+  padding-bottom: 60px;
+}
+
+p {
+  @apply mb-3 leading-7;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-br from-red-600 to-yellow-600;
+  @apply dark:from-blue-600 dark:to-indigo-600;
+}
+
+.wave-border {
+  border-image: var(--border-dotted);
+  transition: all 0.2s;
+  &.solid {
+    border-image: var(--border-solid);
+  }
+  &.bottom {
+    border-bottom: 5px solid;
+  }
+  &.top {
+    border-top: 5px solid;
+  }
+  &.adjust-height {
+    margin-bottom: -5px;
+  }
+}
+a {
+  transition: all 0.2s;
+  &:hover,
+  &.active {
+    @apply text-red-600 dark:text-blue-400;
+    cursor: pointer;
+  }
+  &.wave-border {
+    text-decoration: none;
+    &:hover,
+    &.active {
+      border-image: var(--border-colored);
+    }
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+input:checked ~ .dot {
+  transform: translateX(140%);
+  @apply bg-gradient-to-br from-blue-600 to-indigo-600;
+}
+
+button {
+  @extend .gradient-bg;
+  @extend .header-font;
+  @apply uppercase inline-flex items-center;
+  @apply py-1.5 px-4 text-white text-sm rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75;
+}
+
+.tilted {
+  &-header {
+    @apply transform -rotate-2;
+    @apply flex-col flex items-center;
+  }
+  @apply transform -rotate-2;
+}
+
+.story-content {
+  ol,
+  ul {
+    @apply mb-3 list-inside;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  ul {
+    @apply list-disc;
+  }
+  li {
+    div {
+      display: inline-block;
+    }
+  }
+  a {
+    @extend .wave-border, .bottom;
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "_from": "gsap@npm:@gsap/business@^3.8.0",
+  "_id": "@gsap/business@3.8.0",
+  "_inBundle": false,
+  "_integrity": "sha512-ANyAE7DiRfH5SZt2O1u2cMtIm1ceOiMYDTmzt6VT+UsVb1pEBv6cbuCrcE1C2RBp851Sj6t2xnSyIrcdhUErpg==",
+  "_location": "/gsap",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "alias",
+    "registry": true,
+    "raw": "gsap@npm:@gsap/business@^3.8.0",
+    "name": "gsap",
+    "escapedName": "gsap",
+    "rawSpec": "npm:@gsap/business@^3.8.0",
+    "saveSpec": null,
+    "fetchSpec": null,
+    "subSpec": {
+      "type": "range",
+      "registry": true,
+      "raw": "@gsap/business@^3.8.0",
+      "name": "@gsap/business",
+      "escapedName": "@gsap%2fbusiness",
+      "scope": "@gsap",
+      "rawSpec": "^3.8.0",
+      "saveSpec": null,
+      "fetchSpec": "^3.8.0"
+    }
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://npm.greensock.com/@gsap%2fbusiness/-/business-3.8.0.tgz",
+  "_shasum": "7906441dc2deb0433c37fdec9a94f647fc369528",
+  "_spec": "gsap@npm:@gsap/business@^3.8.0",
+  "_where": "/Users/drew/Sites/magazine-jukebox",
+  "bugs": {
+    "url": "https://greensock.com/forums/"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "GSAP is a robust JavaScript toolset that turns developers into animation superheroes. Build high-performance animations that work in **every** major browser. Animate CSS, SVG, canvas, React, Vue, WebGL, colors, strings, motion paths, generic objects...anything JavaScript can touch! The ScrollTrigger plugin lets you create jaw-dropping scroll-based animations with minimal code. No other library delivers such advanced sequencing, reliability, and tight control while solving real-world problems on millions of sites. GSAP works around countless browser inconsistencies; your animations **just work**. At its core, GSAP is a high-speed property manipulator, updating values over time with extreme accuracy. It's up to 20x faster than jQuery! See https://greensock.com/why-gsap/ for what makes GSAP so special.",
+  "filename": "gsap.min.js",
+  "homepage": "https://greensock.com",
+  "keywords": [
+    "GSAP",
+    "GreenSock",
+    "bonus",
+    "animation",
+    "MotionPathPlugin",
+    "motion",
+    "motionPath",
+    "ScrollTrigger",
+    "easing",
+    "JavaScript",
+    "PixiPlugin",
+    "CustomEase",
+    "Flip",
+    "SVG",
+    "3D",
+    "2D",
+    "transform",
+    "morph",
+    "morphing",
+    "tweening"
+  ],
+  "license": "This package should only be used by individuals/companies with an active Business Green Club GreenSock membership. See https://greensock.com/club/. Licensing: https://greensock.com/licensing/",
+  "main": "dist/gsap.js",
+  "maintainers": [
+    {
+      "name": "Jack Doyle",
+      "email": "jack@greensock.com",
+      "url": "https://greensock.com"
+    }
+  ],
+  "module": "index.js",
+  "name": "@gsap/business",
+  "privjsAlias": "@gsap/business",
+  "publishConfig": {
+    "registry": "https://npm.greensock.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greensock/GSAP.git"
+  },
+  "sideEffects": false,
+  "types": "types/index.d.ts",
+  "version": "3.8.0"
+}

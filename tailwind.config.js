@@ -6,9 +6,20 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}"
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      rotate: {
+        "-0.25": "-0.25deg",
+        "-0.5": "-0.5deg"
+      },
+      lineHeight: {
+        0.75: "0.75"
+      },
+      height: {
+        124: "28rem"
+      }
+    }
   },
   variants: {
     extend: {}

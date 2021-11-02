@@ -14,14 +14,24 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+      }
+    ]
+  },
+
+  router: {
+    linkActiveClass: "active"
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/base.css"],
+  css: ["@/base.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ["~/plugins/graphcms.ts"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -33,16 +43,6 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss"
   ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/content
-    "@nuxt/content"
-  ],
-
-  // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
 };
