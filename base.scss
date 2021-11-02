@@ -132,11 +132,6 @@ a {
   opacity: 0;
 }
 
-input:checked ~ .dot {
-  transform: translateX(140%);
-  @apply bg-gradient-to-br from-blue-600 to-indigo-600;
-}
-
 button {
   @extend .gradient-bg;
   @extend .header-font;
