@@ -342,7 +342,7 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 .portrait-container {
-  @apply max-h-32;
+  @apply w-full max-w-lg;
 }
 .shirt-color {
   fill: #f59e0b;

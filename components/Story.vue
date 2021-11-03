@@ -1,5 +1,5 @@
 <template>
-  <div class="post-item relative p-2 flex-grow">
+  <div class="post-item relative px-2 py-4 flex-grow">
     <nuxt-link :to="{ name: 'story-slug', params: { slug: story.slug } }">
       <div class="mb-4 rounded-2xl overflow-hidden">
         <img
@@ -43,5 +43,6 @@ export default Vue.extend({
 <style scoped>
 .post-item {
   flex-basis: 24ch;
+  max-width: 50%;
 }
 </style>
