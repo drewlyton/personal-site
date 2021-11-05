@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{254:function(e,n,t){"use strict";t.r(n);var r=t(1).a.extend({}),c=t(15),component=Object(c.a)(r,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("h2",[e._v("software engineer")])}),[],!1,null,"59f298bb",null);n.default=component.exports}}]);

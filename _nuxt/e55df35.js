@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{255:function(e,t,n){"use strict";n.r(t);var c=n(1).a.extend({}),r=n(15),component=Object(r.a)(c,(function(){var e=this,t=e.$createElement;return(e._self._c||t)("h2",{staticClass:"ml-10"},[e._v("video producer")])}),[],!1,null,"f1713cd0",null);t.default=component.exports}}]);
