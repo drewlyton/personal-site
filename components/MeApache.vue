@@ -273,12 +273,10 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { gsap } from "../static/gsap/index";
-import { MorphSVGPlugin } from "../static/gsap/MorphSVGPlugin";
+import { gsap } from "gsap";
 
 export default Vue.extend({
   mounted() {
-    gsap.registerPlugin(MorphSVGPlugin);
     const inTimeline = gsap
       .timeline({ delay: 0.5 })
       .set("#arm", {

@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { gsap } from "~/static/gsap/index";
+import { gsap } from "gsap";
 import { SplitText } from "~/static/gsap/SplitText";
 
 export default Vue.extend({

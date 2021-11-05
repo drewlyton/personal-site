@@ -34,7 +34,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { gsap } from "~/static/gsap/index";
+import { gsap } from "gsap";
 
 export default Vue.extend({
   props: {
