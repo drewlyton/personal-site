@@ -3,7 +3,7 @@
     <div class="tilted mb-8">
       <div class="space-y-1">
         <h5 class="uppercase">living in...</h5>
-        <life-ani />
+        <life-ani :no-link="true" />
       </div>
     </div>
     <div>

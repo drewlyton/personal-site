@@ -2,6 +2,7 @@
   <div class="portrait-container">
     <svg
       width="100%"
+      height="100%"
       viewBox="0 0 375 434"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -272,12 +273,10 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { gsap } from "../static/gsap/index";
-import { MorphSVGPlugin } from "../static/gsap/MorphSVGPlugin";
+import { gsap } from "gsap";
 
 export default Vue.extend({
   mounted() {
-    gsap.registerPlugin(MorphSVGPlugin);
     const inTimeline = gsap
       .timeline({ delay: 0.5 })
       .set("#arm", {
@@ -342,7 +341,6 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 .portrait-container {
-  @apply max-h-32;
 }
 .shirt-color {
   fill: #f59e0b;
