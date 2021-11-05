@@ -3,7 +3,7 @@
     <div class="tilted mb-8">
       <div class="space-y-1">
         <h5 class="uppercase">I'm a...</h5>
-        <software-ani />
+        <software-ani :no-link="true" />
       </div>
     </div>
     <div>

@@ -40,9 +40,13 @@ export default Vue.extend({
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .post-item {
-  flex-basis: 24ch;
-  max-width: 50%;
+  flex-basis: 28ch;
+}
+@media screen and (min-width: 600px) {
+  .post-item:last-child:not(:nth-child(even)) {
+    max-width: 50%;
+  }
 }
 </style>

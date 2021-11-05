@@ -2,6 +2,7 @@
   <div class="portrait-container">
     <svg
       width="100%"
+      height="100%"
       viewBox="0 0 375 434"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -342,7 +343,6 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 .portrait-container {
-  @apply w-full max-w-lg;
 }
 .shirt-color {
   fill: #f59e0b;

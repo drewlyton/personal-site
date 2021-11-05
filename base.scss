@@ -93,7 +93,7 @@ p {
 
 .wave-border {
   border-image: var(--border-dotted);
-  transition: all 0.2s;
+  // transition: all 0.2s;
   &.solid {
     border-image: var(--border-solid);
   }
@@ -107,10 +107,10 @@ p {
     margin-bottom: -5px;
   }
 }
-a {
-  transition: all 0.2s;
+a[href] {
   &:hover,
   &.active {
+    transition: all 0.2s;
     @apply text-red-600 dark:text-blue-400;
     cursor: pointer;
   }
