@@ -20,7 +20,8 @@
     "graphql-request": "^3.6.1",
     "gsap": "^3.8.0",
     "nuxt": "^2.15.7",
-    "tailwindcss": "^2.2.6"
+    "tailwindcss": "^2.2.6",
+    "vue-gtag": "^1.16.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
