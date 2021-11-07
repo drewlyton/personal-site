@@ -166,4 +166,9 @@ button {
   a {
     @extend .wave-border, .bottom;
   }
+  h2,
+  h3 {
+    margin-top: 0.75em;
+    // margin-bottom: 1em;
+  }
 }
