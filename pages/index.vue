@@ -68,7 +68,7 @@ export default Vue.extend({
     const { stories: lifeStories } = await $graphcms.request(GetStoriesByTag, {
       tags: ["life"]
     });
-    return { softwareStories.reverse(), videoStories.reverse(), motionStories.reverse(), lifeStories.reverse() };
+    return { softwareStories: softwareStories.reverse(), videoStories: videoStories.reverse(), motionStories: motionStories.reverse(), lifeStories: lifeStories.reverse() };
   },
   head() {
     return {
