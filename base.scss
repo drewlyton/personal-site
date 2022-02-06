@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --bg-light: #fff8f1;
   --border-solid: url("~static/border.svg") 30 0;
@@ -165,10 +169,5 @@ button {
   }
   a {
     @extend .wave-border, .bottom;
-  }
-  h2,
-  h3 {
-    margin-top: 0.75em;
-    // margin-bottom: 1em;
   }
 }
