@@ -1,5 +1,5 @@
 <template>
-  <div class="relative max-w-[1rem]">
+  <div class="relative">
     <div class="absolute bottom-2 left-0">
       <svg
         id="clapper"

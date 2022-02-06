@@ -11,7 +11,21 @@
           <h2 class="uppercase">{{ story.title }}</h2>
         </div>
       </div>
-      <div class="mb-6 story-content" v-html="story.content.html"></div>
+      <div
+        class="
+          mb-6
+          story-content
+          prose
+          prose-h2:text-5xl
+          prose-h3:text-4xl
+          prose-h4:text-3xl
+          prose-headings:uppercase
+          md:prose-lg
+          lg:prose-xl
+          dark:prose-invert
+        "
+        v-html="story.content.html"
+      ></div>
       <div>
         <h5 class="header-font mb-4">Best,</h5>
         <div class="flex items-start space-x-4">
