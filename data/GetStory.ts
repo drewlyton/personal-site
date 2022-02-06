@@ -21,6 +21,8 @@ export default gql`
           url
         }
       }
+      videoUrl
+      portfolioUrl
     }
   }
 `;

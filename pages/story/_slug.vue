@@ -11,14 +11,23 @@
           <h2 class="uppercase">{{ story.title }}</h2>
         </div>
       </div>
+      <div v-if="story.videoUrl" class="w-full mb-8">
+        <iframe
+          class="w-full aspect-video"
+          :src="story.videoUrl"
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div
         class="
           mb-6
           story-content
           prose
-          prose-h2:text-5xl
-          prose-h3:text-4xl
-          prose-h4:text-3xl
+          prose-h2:text-4xl
+          prose-h3:text-3xl
+          prose-h4:text-2xl
           prose-headings:uppercase
           md:prose-lg
           lg:prose-xl
@@ -76,6 +85,7 @@ export default Vue.extend({
   async asyncData({ $graphcms, params }) {
     const { slug } = params;
     const { story } = await $graphcms.request(GetStory, { slug });
+    console.log(story.videoUrl);
     return { story };
   },
   head() {
