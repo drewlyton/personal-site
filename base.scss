@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --bg-light: #fff8f1;
   --border-solid: url("~static/border.svg") 30 0;
