@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 
 export default gql`
   {
-    stories(orderBy: createdAt_DESC) {
+    stories(where: { highlighted: true }) {
       id
       title
       slug
@@ -10,8 +10,8 @@ export default gql`
       featuredImage {
         url
       }
-      highlighted
       createdAt
+      highlighted
       author {
         id
         name
