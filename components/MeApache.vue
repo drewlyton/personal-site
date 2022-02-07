@@ -1,5 +1,5 @@
 <template>
-  <div class="portrait-container">
+  <div class="max-w-[483px] flex-grow">
     <svg
       width="100%"
       height="100%"
