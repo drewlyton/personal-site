@@ -1,10 +1,17 @@
 <template>
   <section class="top-section">
     <div class="tilted-header">
-      <h1 class="uppercase mb-8">Stories</h1>
+      <h1 class="uppercase mb-4">Stories</h1>
     </div>
     <div class="mx-auto max-w-prose">
-      <div class="px-2">
+      <story
+        v-for="story in highlighted"
+        :key="story.slug"
+        :story="story"
+      ></story>
+
+      <div class="px-2 mt-4">
+        <h5 class="mb-2">ALL STORIES</h5>
         <div
           class="
             border border-gray-700
@@ -28,11 +35,7 @@
           />
         </div>
       </div>
-      <story
-        v-for="story in highlighted"
-        :key="story.slug"
-        :story="story"
-      ></story>
+
       <div class="flex flex-wrap items-start">
         <story
           v-for="story in filterStories(stories)"
