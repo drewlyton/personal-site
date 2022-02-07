@@ -28,7 +28,11 @@
           />
         </div>
       </div>
-
+      <story
+        v-for="story in highlighted"
+        :key="story.slug"
+        :story="story"
+      ></story>
       <div class="flex flex-wrap items-start">
         <story
           v-for="story in filterStories(stories)"
@@ -43,13 +47,15 @@
 <script lang="ts">
 import Vue from "vue";
 import GetStories from "../data/GetStories";
+import GetHighlighted from "../data/GetHighlighted";
 import Story from "../types/Story";
 
 export default Vue.extend({
   transition: "home",
   async asyncData({ $graphcms }) {
     const { stories } = await $graphcms.request(GetStories);
-    return { stories };
+    const { stories: highlighted } = await $graphcms.request(GetHighlighted);
+    return { stories, highlighted };
   },
   data() {
     return {
