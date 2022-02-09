@@ -8,8 +8,10 @@
     </div>
     <div>
       <p>
-        I love building digital products. My favorite medium is the web, but I’m
-        always learning new technologies that can help bring my ideas to life.
+        I love designing and developing digital products -
+        <a href="https://join.lumastic.com" target="_blank"
+          >primarily for creators</a
+        >. I'm always learning new skills to help bring my ideas to life.
       </p>
       <p>Here are some of my latest projects:</p>
     </div>

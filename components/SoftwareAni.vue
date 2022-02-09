@@ -5,7 +5,7 @@
       :href="link"
       :class="[noLink ? '' : 'wave-border', 'bottom inline-block relative']"
     >
-      software engineer
+      product engineer
     </a>
     &#62;
   </h2>
