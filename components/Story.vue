@@ -16,7 +16,7 @@
       </h4>
       <div class="text-gray-500 mb-2 text-xs dark:text-gray-300">
         <em>{{
-          new Date(story.createdAt).toLocaleString(undefined, {
+          new Date(story.publishedAt).toLocaleString(undefined, {
             weekday: "long",
             year: "numeric",
             month: "long",

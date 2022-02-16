@@ -5,7 +5,7 @@ export default gql`
     story(where: { slug: $slug }) {
       id
       title
-      createdAt
+      publishedAt
       content {
         html
       }
