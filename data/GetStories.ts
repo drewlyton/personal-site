@@ -2,7 +2,7 @@ import { gql } from "graphql-request";
 
 export default gql`
   {
-    stories(orderBy: createdAt_DESC) {
+    stories(orderBy: publishedAt_DESC) {
       id
       title
       slug
@@ -11,7 +11,7 @@ export default gql`
         url
       }
       highlighted
-      createdAt
+      publishedAt
       author {
         id
         name

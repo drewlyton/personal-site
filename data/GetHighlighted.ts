@@ -10,7 +10,7 @@ export default gql`
       featuredImage {
         url
       }
-      createdAt
+      publishedAt
       highlighted
       author {
         id

@@ -69,10 +69,10 @@ export default Vue.extend({
       tags: ["life"]
     });
     return {
-      softwareStories: softwareStories.reverse(),
-      videoStories: videoStories.reverse(),
-      motionStories: motionStories.reverse(),
-      lifeStories: lifeStories.reverse()
+      softwareStories,
+      videoStories,
+      motionStories,
+      lifeStories
     };
   },
 
