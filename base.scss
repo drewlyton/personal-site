@@ -170,4 +170,8 @@ button {
   a {
     @extend .wave-border, .bottom;
   }
+  iframe {
+    width: 100%;
+    min-height: 450px;
+  }
 }
