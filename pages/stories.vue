@@ -49,6 +49,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import metaTags from "../helpers/meta_tags";
 import GetStories from "../data/GetStories";
 import GetHighlighted from "../data/GetHighlighted";
 import Story from "../types/Story";
@@ -75,14 +76,18 @@ export default Vue.extend({
           name: "description",
           content:
             "My name's Drew. I'm a designer and software engineer who likes to make stuff on the internet. I make videos and write about things I'm learning."
-        },
-        {
-          hid: "og:image",
-          name: "og:image",
-          content:
-            "https://media.graphcms.com/output=format:jpg/resize=,width:400,height:400/Rxt3c6FaT4uTu7iYkkkC"
         }
-      ]
+      ].concat(
+        metaTags(
+          "image",
+          "https://media.graphcms.com/output=format:jpg/resize=,width:400,height:400/Rxt3c6FaT4uTu7iYkkkC"
+        ),
+        metaTags(
+          "description",
+          "My name's Drew. I'm a designer and software engineer who likes to make stuff on the internet. I make videos and write about things I'm learning."
+        ),
+        metaTags("title", "Stories | Drew Lytle")
+      )
     };
   },
   methods: {
