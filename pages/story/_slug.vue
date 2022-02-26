@@ -96,6 +96,11 @@ export default Vue.extend({
           hid: "description",
           name: "description",
           content: this.story.description
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary"
         }
       ].concat(
         metaTags("image", this.story.featuredImage.url),

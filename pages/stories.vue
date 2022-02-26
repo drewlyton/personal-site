@@ -76,6 +76,11 @@ export default Vue.extend({
           name: "description",
           content:
             "My name's Drew. I'm a designer and software engineer who likes to make stuff on the internet. I make videos and write about things I'm learning."
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary"
         }
       ].concat(
         metaTags(
