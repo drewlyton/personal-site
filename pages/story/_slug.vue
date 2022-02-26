@@ -71,6 +71,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import metaTags from "../../helpers/meta_tags";
 import GetStory from "../../data/GetStory";
 import Story from "~/types/Story";
 
@@ -85,7 +86,6 @@ export default Vue.extend({
   async asyncData({ $graphcms, params }) {
     const { slug } = params;
     const { story } = await $graphcms.request(GetStory, { slug });
-    console.log(story.videoUrl);
     return { story };
   },
   head() {
@@ -96,13 +96,12 @@ export default Vue.extend({
           hid: "description",
           name: "description",
           content: this.story.description
-        },
-        {
-          hid: "og:image",
-          property: "og:image",
-          content: this.story.featuredImage.url
         }
-      ]
+      ].concat(
+        metaTags("image", this.story.featuredImage.url),
+        metaTags("description", this.story.description),
+        metaTags("title", this.story.title)
+      )
     };
   }
 });
