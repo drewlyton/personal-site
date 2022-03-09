@@ -76,11 +76,6 @@ export default Vue.extend({
           name: "description",
           content:
             "My name's Drew. I'm a designer and software engineer who likes to make stuff on the internet. I make videos and write about things I'm learning."
-        },
-        {
-          hid: "twitter:card",
-          name: "twitter:card",
-          content: "summary_large_image"
         }
       ].concat(
         metaTags(
@@ -91,7 +86,8 @@ export default Vue.extend({
           "description",
           "My name's Drew. I'm a designer and software engineer who likes to make stuff on the internet. I make videos and write about things I'm learning."
         ),
-        metaTags("title", "Stories | Drew Lytle")
+        metaTags("title", "Stories | Drew Lytle"),
+        metaTags("url", "https://www.drewis.cool/stories")
       )
     };
   },
