@@ -4,9 +4,9 @@
       <div class="tilted mb-8">
         <div class="space-y-1">
           <nuxt-link to="/stories" class="text-gray-500 dark:text-gray-300"
-            ><small class="header-font uppercase">
+            ><div class="header-font uppercase text-xs">
               <i class="bi bi-arrow-left"></i> All Stories
-            </small></nuxt-link
+            </div></nuxt-link
           >
           <h2 class="uppercase">{{ story.title }}</h2>
         </div>
@@ -49,7 +49,7 @@
             <h5 class="header-font uppercase leading-none mt-1">
               {{ story.author.name }}
             </h5>
-            <small class="text-gray-500 mb-2 text-xs dark:text-gray-300"
+            <small class="text-gray-500 mb-2 text-sm dark:text-gray-300"
               ><em>{{
                 new Date(story.publishedAt).toLocaleString(undefined, {
                   weekday: "long",
@@ -59,7 +59,7 @@
                 })
               }}</em></small
             >
-            <p class="text-gray-600 text-sm dark:text-gray-100">
+            <p class="text-gray-600 dark:text-gray-100">
               {{ story.author.bio }}
             </p>
           </div>
