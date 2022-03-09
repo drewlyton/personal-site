@@ -96,16 +96,12 @@ export default Vue.extend({
           hid: "description",
           name: "description",
           content: this.story.description
-        },
-        {
-          hid: "twitter:card",
-          name: "twitter:card",
-          content: "summary_large_image"
         }
       ].concat(
         metaTags("image", this.story.featuredImage.url),
         metaTags("description", this.story.description),
-        metaTags("title", this.story.title)
+        metaTags("title", this.story.title),
+        metaTags("url", `https://www.drewis.cool${this.$route.path}`)
       )
     };
   }
