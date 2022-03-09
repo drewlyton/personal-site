@@ -80,7 +80,7 @@ export default Vue.extend({
         {
           hid: "twitter:card",
           name: "twitter:card",
-          content: "summary"
+          content: "summary_large_image"
         }
       ].concat(
         metaTags(
