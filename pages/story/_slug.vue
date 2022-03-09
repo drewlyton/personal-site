@@ -4,7 +4,7 @@
       <div class="tilted mb-8">
         <div class="space-y-1">
           <nuxt-link to="/stories" class="text-gray-500 dark:text-gray-300"
-            ><div class="header-font uppercase text-xs">
+            ><div class="header-font uppercase text-sm">
               <i class="bi bi-arrow-left"></i> All Stories
             </div></nuxt-link
           >
