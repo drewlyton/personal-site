@@ -29,9 +29,7 @@
 }
 
 @font-face {
-  font-family: "Grayscale", system-ui, -apple-system,
-    /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "Grayscale";
   src: local("Grayscale"),
     url("~static/Grayscale-Regular.ttf") format("truetype");
 }
@@ -42,7 +40,9 @@ h3,
 h4,
 h5,
 .header-font {
-  font-family: "Grayscale";
+  font-family: "Grayscale", system-ui, -apple-system,
+    /* Firefox supports this but not yet `system-ui` */ "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 h1 {
