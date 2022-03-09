@@ -1,8 +1,9 @@
 function metaTags(name: string, content: string): Array<any> {
   return [
     {
-      hid: `og:${name}`,
-      name: `og:${name}`,
+      hid: `${name}`,
+      name: `${name}`,
+      property: `og:${name}`,
       content
     },
     {
